@@ -9,7 +9,7 @@
     <section>
 
     <h3><%= contact.name %></h3>
-    <form class="" action="/index/<%= contact._id %>/edit?_method=put" method="post">
+    <form class="" action="/update/<%= contact._id %>/edit?_method=put" method="post">
 
         <p>Name :</p>
         <input type="text" id="name" name="name" value="<%= contact.name %>">

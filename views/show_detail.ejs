@@ -16,8 +16,8 @@
     <div class="as">
 
 
-      <a  href="/index/<%= contact._id %>/edit">edit</a>
-      <a  href="/contact">back</a>
+      <a  href="/update/<%= contact._id %>/edit">edit</a>
+      <a  href="/show">back</a>
       <form class="as" action="/delete/<%= contact._id %>?_method=delete" method="post">
         <a href="#" onclick="this.parentElement.submit()">delete</a>
       </form>

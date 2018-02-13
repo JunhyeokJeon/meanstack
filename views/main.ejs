@@ -10,7 +10,7 @@
       <h2>Index</h2>
       <ul>
       <% contacts.forEach(function(contact) { %>
-        <li><a href="/index/<%= contact._id %>"><%= contact.name %></a></li>
+        <li><a href="/show/<%= contact._id %>"><%= contact.name %></a></li>
       <% }) %>
       </ul>
     </section>
