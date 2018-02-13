@@ -5,7 +5,7 @@ var bodyparser = require('body-parser');
 var methodoverride = require('method-override');
 
 // Mongo DB
-mongoose.connect(process.env.MONGO_DB);
+mongoose.connect('mongodb://inamorfati:newlife4829@ds131258.mlab.com:31258/inamorfati_1');
 var db = mongoose.connection;
 db.once('open', () => {
   console.log('DB Connected');
