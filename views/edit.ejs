@@ -5,22 +5,34 @@
   </head>
   <body>
     <% include includes/header.ejs %>
-    <% include includes/nav.ejs %>
-    <section>
+    <div class="container contact contact-new">
+      <div class="contact-menu">
+        <a class="btn btn-default" href="/show">Back</a>
+      </div>
+      <section>
 
-    <h3><%= contact.name %></h3>
-    <form class="" action="/update/<%= contact._id %>/edit?_method=put" method="post">
+      <h3><%= contact.name %></h3>
+      <form class="contact-form" action="/update/<%= contact._id %>/edit?_method=put" method="post">
 
-        <p>Name :</p>
-        <input type="text" id="name" name="name" value="<%= contact.name %>">
-        <p>E-mail :</p>
-        <input type="text" id="email" name="email" value="<%= contact.email %>">
-        <p>Phone :</p>
-        <input type="text" id="phone" name="phone" value="<%= contact.phone %>">
-        <br /><br />
-        <button type="submit" name="button">Edit</button>
+        <div class="form-group">
+           <label for="name">Name</label>
+           <input class="form-control" type="text"  name="name" value="<%= contact.name %>">
+        </div>
+        <div class="form-group">
+           <label for="email">E-mail</label>
+           <input class="form-control" type="text" name="email" value="<%= contact.email %>">
+        </div>
+        <div class="form-group">
+           <label for="phone">Phone</label>
+           <input class="form-control" type="text"  name="phone" value="<%= contact.phone %>">
+        </div>
 
-    </form>
-    </section>
+        <div>
+         <button type="submit" class="btn btn-default">Edit</button>
+        </div>
+
+      </form>
+      </section>
+    </div>
   </body>
 </html>

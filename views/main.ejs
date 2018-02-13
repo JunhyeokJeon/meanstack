@@ -5,14 +5,17 @@
   </head>
   <body>
     <% include includes/header.ejs %>
-    <% include includes/nav.ejs %>
-    <section>
-      <h2>Index</h2>
-      <ul>
-      <% contacts.forEach(function(contact) { %>
-        <li><a href="/show/<%= contact._id %>"><%= contact.name %></a></li>
-      <% }) %>
-      </ul>
-    </section>
+    <div class="container contact contact-index">
+      <section>
+        <h2>Index</h2>
+        <ul class="list-group">
+        <% contacts.forEach(function(contact) { %>
+          <li class="list-group-item"><a href="/show/<%= contact._id %>"><%= contact.name %></a></li>
+        <% }) %>
+        </ul>
+      </section>
+
+
+    </div>
   </body>
 </html>

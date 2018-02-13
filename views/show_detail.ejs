@@ -5,23 +5,24 @@
   </head>
   <body>
     <% include includes/header.ejs %>
-    <% include includes/nav.ejs %>
-    <section>
+    <div class="container contact contact-index">
+      <section>
 
-    <h3><%= contact.name %></h3>
-    <ul>
-      <li>E-mail: <%= contact.email %></li>
-      <li>Phone: <%= contact.phone %></li>
-    </ul>
-    <div class="as">
+      <h3><%= contact.name %></h3>
+
+      <label for="">E-mail</label><span> <%= contact.email %></span>
+      <label for="">Phone</label><span><%= contact.phone %></span>
+
+      <div class="contact-menu">
 
 
-      <a  href="/update/<%= contact._id %>/edit">edit</a>
-      <a  href="/show">back</a>
-      <form class="as" action="/delete/<%= contact._id %>?_method=delete" method="post">
-        <a href="#" onclick="this.parentElement.submit()">delete</a>
-      </form>
+        <a class="btn btn-default" href="/update/<%= contact._id %>/edit">edit</a>
+        <a class="btn btn-default" href="/show">back</a>
+        <form class="as" action="/delete/<%= contact._id %>?_method=delete" method="post">
+          <a class="btn btn-default" href="#" onclick="this.parentElement.submit()">delete</a>
+        </form>
+      </div>
+      </section>
     </div>
-    </section>
   </body>
 </html>

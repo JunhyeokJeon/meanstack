@@ -5,19 +5,33 @@
   </head>
   <body>
     <% include includes/header.ejs %>
-    <% include includes/nav.ejs %>
-    <section>
-      <h2>New</h2>
-      <form class="" action="/create" method="post">
-        <p>Name :</p>
-        <input type="text" id="name" name="name" value="">
-        <p>E-mail :</p>
-        <input type="text" id="email" name="email" value="" placeholder="ex) hong@address.com">
-        <p>Phone :</p>
-        <input type="text" id="phone" name="phone" value="" placeholder="ex) 010-4545-4545">
-        <br /><br />
-        <button type="submit" name="button">Submit</button>
-      </form>
-    </section>
+    <div class="container contact contact-new">
+      <div class="contact-menu">
+        <a class="btn btn-default" href="/show">Back</a>
+      </div>
+      <section>
+        <h2>New</h2>
+        <form class="contact-form" action="/create" method="post">
+          <div class="form-group">
+             <label for="name">Name</label>
+             <input class="form-control" type="text"  name="name" value="">
+          </div>
+          <div class="form-group">
+             <label for="email">E-mail</label>
+             <input class="form-control" type="text"  name="email" placeholder="ex) hong@address.com">
+          </div>
+          <div class="form-group">
+             <label for="phone">Phone</label>
+             <input class="form-control" type="text"  name="phone" placeholder="ex) 010-4545-4545">
+          </div>
+
+          <div>
+           <button type="submit" class="btn btn-default">Submit</button>
+          </div>
+        </form>
+
+
+      </section>
+    </div>
   </body>
 </html>
