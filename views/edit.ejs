@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <% include includes/head.ejs %>
+  </head>
+  <body>
+    <% include includes/header.ejs %>
+    <% include includes/nav.ejs %>
+    <section>
+
+    <h3><%= contact.name %></h3>
+    <form class="" action="/index/<%= contact._id %>/edit?_method=put" method="post">
+
+        <p>Name :</p>
+        <input type="text" id="name" name="name" value="<%= contact.name %>">
+        <p>E-mail :</p>
+        <input type="text" id="email" name="email" value="<%= contact.email %>">
+        <p>Phone :</p>
+        <input type="text" id="phone" name="phone" value="<%= contact.phone %>">
+        <br /><br />
+        <button type="submit" name="button">Edit</button>
+
+    </form>
+    </section>
+  </body>
+</html>

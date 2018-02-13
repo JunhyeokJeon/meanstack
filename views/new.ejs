@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <% include includes/head.ejs %>
+  </head>
+  <body>
+    <% include includes/header.ejs %>
+    <% include includes/nav.ejs %>
+    <section>
+      <h2>New</h2>
+      <form class="" action="/create" method="post">
+        <p>Name :</p>
+        <input type="text" id="name" name="name" value="">
+        <p>E-mail :</p>
+        <input type="text" id="email" name="email" value="" placeholder="ex) hong@address.com">
+        <p>Phone :</p>
+        <input type="text" id="phone" name="phone" value="" placeholder="ex) 010-4545-4545">
+        <br /><br />
+        <button type="submit" name="button">Submit</button>
+      </form>
+    </section>
+  </body>
+</html>

@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <meta charset="utf-8">
-  <title>Hello World!</title>
-  <link rel="stylesheet" href="/css/adress.css">
+  <% include includes/head.ejs %>
   </head>
   <body>
-    <header>
-      MainPage for ContactUS
-    </header>
-
+    <% include includes/header.ejs %>
+    <% include includes/nav.ejs %>
+    <section>
+      <h2>Index</h2>
+      <ul>
+      <% contacts.forEach(function(contact) { %>
+        <li><a href="/index/<%= contact._id %>"><%= contact.name %></a></li>
+      <% }) %>
+      </ul>
+    </section>
   </body>
 </html>

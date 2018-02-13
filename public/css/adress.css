@@ -11,3 +11,14 @@ header {
   font-size: 2em;
   font-weight: bold;
 }
+
+nav, section { padding: 15px 10px; }
+
+section h2 { color: tomato; }
+section { border-top: 1px solid #dbdbdb;  }
+
+form p { margin-top: 10px; }
+form {padding: 10px;}
+form input {margin-top: 3px;}
+span { display: flex;}
+.as { display: inline-block;}

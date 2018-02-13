@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <% include includes/head.ejs %>
+  </head>
+  <body>
+    <% include includes/header.ejs %>
+    <% include includes/nav.ejs %>
+    <section>
+
+    <h3><%= contact.name %></h3>
+    <ul>
+      <li>E-mail: <%= contact.email %></li>
+      <li>Phone: <%= contact.phone %></li>
+    </ul>
+    <div class="as">
+
+
+      <a  href="/index/<%= contact._id %>/edit">edit</a>
+      <a  href="/contact">back</a>
+      <form class="as" action="/delete/<%= contact._id %>?_method=delete" method="post">
+        <a href="#" onclick="this.parentElement.submit()">delete</a>
+      </form>
+    </div>
+    </section>
+  </body>
+</html>
